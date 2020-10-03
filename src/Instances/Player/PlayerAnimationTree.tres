@@ -1,7 +1,13 @@
-[gd_resource type="AnimationNodeStateMachine" load_steps=5 format=2]
+[gd_resource type="AnimationNodeStateMachine" load_steps=17 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "Fall"
 
 [sub_resource type="AnimationNodeAnimation" id=1]
 animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "Jump"
 
 [sub_resource type="AnimationNodeAnimation" id=2]
 animation = "Run"
@@ -10,10 +16,34 @@ animation = "Run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=4]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=7]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+
 [resource]
+states/Fall/node = SubResource( 5 )
+states/Fall/position = Vector2( 471, 78 )
 states/Idle/node = SubResource( 1 )
-states/Idle/position = Vector2( 252, 130 )
+states/Idle/position = Vector2( 200, 214 )
+states/Jump/node = SubResource( 6 )
+states/Jump/position = Vector2( 753, 192 )
 states/Run/node = SubResource( 2 )
-states/Run/position = Vector2( 472, 161 )
-transitions = [ "Idle", "Run", SubResource( 3 ), "Run", "Idle", SubResource( 4 ) ]
+states/Run/position = Vector2( 538, 357 )
+transitions = [ "Idle", "Run", SubResource( 3 ), "Run", "Idle", SubResource( 4 ), "Fall", "Idle", SubResource( 7 ), "Idle", "Fall", SubResource( 8 ), "Idle", "Jump", SubResource( 9 ), "Jump", "Idle", SubResource( 10 ), "Run", "Jump", SubResource( 11 ), "Jump", "Run", SubResource( 12 ), "Jump", "Fall", SubResource( 13 ), "Fall", "Jump", SubResource( 14 ), "Run", "Fall", SubResource( 15 ), "Fall", "Run", SubResource( 16 ) ]
 start_node = "Idle"
