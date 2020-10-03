@@ -46,3 +46,13 @@ position = Vector2( 392, 240 )
 
 [node name="Spawn" type="Position2D" parent="."]
 position = Vector2( 104, 168 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
+offset_v = -0.75
+drag_margin_left = 0.4
+drag_margin_right = 0.4
+drag_margin_bottom = 0.45
+editor_draw_limits = true
+editor_draw_drag_margin = true
