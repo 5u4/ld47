@@ -11,6 +11,6 @@ namespace ld47.Utils
 
         public static Emitter Instance { get; } = new Emitter();
 
-        [Signal] public delegate void HitSignal(Player player);
+        [Signal] public delegate void NewPlayerSignal();
     }
 }

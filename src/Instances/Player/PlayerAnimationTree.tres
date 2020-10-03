@@ -1,20 +1,26 @@
-[gd_resource type="AnimationNodeStateMachine" load_steps=17 format=2]
+[gd_resource type="AnimationNodeStateMachine" load_steps=24 format=2]
 
-[sub_resource type="AnimationNodeAnimation" id=5]
-animation = "Fall"
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "Dead"
 
 [sub_resource type="AnimationNodeAnimation" id=1]
-animation = "Idle"
+animation = "Fall"
 
-[sub_resource type="AnimationNodeAnimation" id=6]
-animation = "Jump"
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "Hit"
 
 [sub_resource type="AnimationNodeAnimation" id=2]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "Jump"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
 animation = "Run"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=3]
+[sub_resource type="AnimationNodeStateMachineTransition" id=5]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=4]
+[sub_resource type="AnimationNodeStateMachineTransition" id=6]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=7]
 
@@ -36,14 +42,29 @@ animation = "Run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=16]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
 [resource]
-states/Fall/node = SubResource( 5 )
+states/Dead/node = SubResource( 17 )
+states/Dead/position = Vector2( 971, 112 )
+states/Fall/node = SubResource( 1 )
 states/Fall/position = Vector2( 471, 78 )
-states/Idle/node = SubResource( 1 )
+states/Hit/node = SubResource( 18 )
+states/Hit/position = Vector2( 799, 74 )
+states/Idle/node = SubResource( 2 )
 states/Idle/position = Vector2( 200, 214 )
-states/Jump/node = SubResource( 6 )
+states/Jump/node = SubResource( 3 )
 states/Jump/position = Vector2( 753, 192 )
-states/Run/node = SubResource( 2 )
+states/Run/node = SubResource( 4 )
 states/Run/position = Vector2( 538, 357 )
-transitions = [ "Idle", "Run", SubResource( 3 ), "Run", "Idle", SubResource( 4 ), "Fall", "Idle", SubResource( 7 ), "Idle", "Fall", SubResource( 8 ), "Idle", "Jump", SubResource( 9 ), "Jump", "Idle", SubResource( 10 ), "Run", "Jump", SubResource( 11 ), "Jump", "Run", SubResource( 12 ), "Jump", "Fall", SubResource( 13 ), "Fall", "Jump", SubResource( 14 ), "Run", "Fall", SubResource( 15 ), "Fall", "Run", SubResource( 16 ) ]
+transitions = [ "Idle", "Run", SubResource( 5 ), "Run", "Idle", SubResource( 6 ), "Fall", "Idle", SubResource( 7 ), "Idle", "Fall", SubResource( 8 ), "Idle", "Jump", SubResource( 9 ), "Jump", "Idle", SubResource( 10 ), "Run", "Jump", SubResource( 11 ), "Jump", "Run", SubResource( 12 ), "Jump", "Fall", SubResource( 13 ), "Fall", "Jump", SubResource( 14 ), "Run", "Fall", SubResource( 15 ), "Fall", "Run", SubResource( 16 ), "Fall", "Hit", SubResource( 19 ), "Jump", "Hit", SubResource( 20 ), "Run", "Hit", SubResource( 21 ), "Hit", "Dead", SubResource( 22 ), "Idle", "Hit", SubResource( 23 ) ]
 start_node = "Idle"
+end_node = "Dead"

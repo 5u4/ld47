@@ -7,7 +7,7 @@ namespace ld47.Environments.Traps.Spikes
     public class Spike : StaticBody2D
     {
         public Area2D HitBox;
-        public const float DeadJumpSpeed = -800f;
+        public const float DeadJumpSpeed = -200f;
 
         public override void _Ready()
         {
@@ -18,8 +18,10 @@ namespace ld47.Environments.Traps.Spikes
 
         private void OnBodyEnter(Node body)
         {
-            if (!(body is Player player)) return;
-            Emitter.Instance.EmitSignal(nameof(Emitter.HitSignal), player);
+            if (!(body is Player player) || player.Die.Enabled) return;
+            player.Die.Enable();
+            player.Velocity.y = DeadJumpSpeed;
+            player.Velocity.x = 0;
         }
     }
 }

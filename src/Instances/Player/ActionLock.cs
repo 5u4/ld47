@@ -12,6 +12,11 @@ namespace ld47.Instances.Player
             Connect("timeout", this, nameof(OnTimeout));
         }
 
+        public void Lock()
+        {
+            IsLocked = true;
+        }
+
         public void Lock(float duration)
         {
             Start(duration);

@@ -39,6 +39,8 @@ namespace ld47.Instances.Player
 
         private string GetAnimationState()
         {
+            if (Player.Die.Landed) return "Dead";
+            if (Player.Die.Enabled) return "Hit";
             if (Player.IsOnFloor()) return Mathf.Abs(Player.Velocity.x) > RunningAnimThreshold ? "Run" : "Idle";
             if (Player.Velocity.y < 0) return "Jump";
             return Player.Velocity.y > 0 ? "Fall" : null;

@@ -57,10 +57,10 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Environments\Corpse\Corpse.cs" />
     <Compile Include="Environments\Traps\Spikes\Spike.cs" />
     <Compile Include="Instances\Player\ActionLock.cs" />
     <Compile Include="Instances\Player\Animation.cs" />
+    <Compile Include="Instances\Player\Die.cs" />
     <Compile Include="Instances\Player\Gravity.cs" />
     <Compile Include="Instances\Player\Jump.cs" />
     <Compile Include="Instances\Player\Player.cs" />
