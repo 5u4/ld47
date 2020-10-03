@@ -8,11 +8,13 @@ namespace ld47.Scenes
     public class World : Node2D
     {
         public Position2D Spawn;
+        public Node2D Corpses;
 
         public override void _Ready()
         {
             base._Ready();
             Spawn = GetNode<Position2D>("Spawn");
+            Corpses = GetNode<Node2D>("Corpses");
 
             Emitter.Instance.Connect(nameof(Emitter.NewPlayerSignal), this, nameof(OnNewPlayer));
 

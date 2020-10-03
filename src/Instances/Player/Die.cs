@@ -1,4 +1,5 @@
 using Godot;
+using ld47.Scenes;
 using ld47.Utils;
 
 namespace ld47.Instances.Player
@@ -37,8 +38,16 @@ namespace ld47.Instances.Player
             {
                 Emitter.Instance.EmitSignal(nameof(Emitter.NewPlayerSignal));
                 Landed = true;
+                MoveToCorpses();
             }
             PreviousVelocity = Player.Velocity;
+        }
+
+        private void MoveToCorpses()
+        {
+            var world = Player.GetParent<Scenes.World>();
+            world.RemoveChild(Player);
+            world.Corpses.AddChild(Player);
         }
     }
 }
