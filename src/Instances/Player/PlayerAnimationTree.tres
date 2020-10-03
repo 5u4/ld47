@@ -1,0 +1,19 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=5 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=1]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "Run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=3]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=4]
+
+[resource]
+states/Idle/node = SubResource( 1 )
+states/Idle/position = Vector2( 252, 130 )
+states/Run/node = SubResource( 2 )
+states/Run/position = Vector2( 472, 161 )
+transitions = [ "Idle", "Run", SubResource( 3 ), "Run", "Idle", SubResource( 4 ) ]
+start_node = "Idle"
