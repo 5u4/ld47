@@ -14,7 +14,7 @@ namespace ld47.Scenes
             base._Ready();
             Spawn = GetNode<Position2D>("Spawn");
 
-            Emitter.Instance.Connect(nameof(Emitter.NewPlayerSignal), this, nameof(InitializePlayer));
+            Emitter.Instance.Connect(nameof(Emitter.NewPlayerSignal), this, nameof(OnNewPlayer));
 
             InitializePlayer();
         }
@@ -31,6 +31,11 @@ namespace ld47.Scenes
             if (!(GD.Load<PackedScene>("res://Instances/Player/Player.tscn").Instance() is Player player))
                 throw new Exception();
             return player;
+        }
+
+        private void OnNewPlayer()
+        {
+            InitializePlayer();
         }
     }
 }
