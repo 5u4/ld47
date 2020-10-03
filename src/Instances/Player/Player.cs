@@ -9,6 +9,8 @@ namespace ld47.Instances.Player
         public Animation Animation;
         public Gravity Gravity;
         public Run Run;
+        public AnimatedSprite AnimatedSprite;
+        public CollisionShape2D CollisionShape2D;
 
         public override void _Ready()
         {
@@ -17,6 +19,8 @@ namespace ld47.Instances.Player
             Animation = GetNode<Animation>("Controllers/Animation");
             Gravity = GetNode<Gravity>("Controllers/Gravity");
             Run = GetNode<Run>("Controllers/Run");
+            AnimatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
+            CollisionShape2D = GetNode<CollisionShape2D>("CollisionShape2D");
         }
 
         public override void _PhysicsProcess(float delta)
