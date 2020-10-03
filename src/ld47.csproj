@@ -57,6 +57,8 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Environments\Traps\Doors\Button.cs" />
+    <Compile Include="Environments\Traps\Doors\Door.cs" />
     <Compile Include="Environments\Traps\Spikes\Spike.cs" />
     <Compile Include="Instances\Player\ActionLock.cs" />
     <Compile Include="Instances\Player\Animation.cs" />
