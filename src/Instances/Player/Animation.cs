@@ -2,7 +2,7 @@ using Godot;
 
 namespace ld47.Instances.Player
 {
-    public class AnimationController : Node2D
+    public class Animation : Node2D
     {
         public Player Player;
         public AnimatedSprite AnimatedSprite;
