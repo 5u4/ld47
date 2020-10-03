@@ -57,6 +57,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Instances\Player\ActionLock.cs" />
     <Compile Include="Instances\Player\Animation.cs" />
     <Compile Include="Instances\Player\Gravity.cs" />
     <Compile Include="Instances\Player\Player.cs" />
