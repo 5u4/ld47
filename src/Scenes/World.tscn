@@ -63,6 +63,7 @@ position = Vector2( 536, 248 )
 [node name="Button" parent="Traps" instance=ExtResource( 5 )]
 position = Vector2( 584, 240 )
 DoorPath = NodePath("../Door")
+Reversed = true
 
 [node name="Corpses" type="Node2D" parent="."]
 
