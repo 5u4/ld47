@@ -1,5 +1,6 @@
 using System;
 using Godot;
+using ld47.Environments.CheckPoint;
 using ld47.Instances.Player;
 using ld47.Utils;
 
@@ -10,6 +11,7 @@ namespace ld47.Scenes
         public Position2D Spawn;
         public Node2D Corpses;
         public Camera2D Camera;
+        public CheckPoint CheckPoint;
 
         public override void _Ready()
         {
@@ -19,15 +21,16 @@ namespace ld47.Scenes
             Camera = GetNode<Camera2D>("Camera2D");
 
             Emitter.Instance.Connect(nameof(Emitter.NewPlayerSignal), this, nameof(OnNewPlayer));
+            Emitter.Instance.Connect(nameof(Emitter.ActivateCheckPoint), this, nameof(OnActivateCheckPoint));
 
-            InitializePlayer();
+            SpawnPlayer();
         }
 
-        public void InitializePlayer()
+        public void SpawnPlayer()
         {
             var player = CreatePlayer();
             AddChild(player);
-            player.GlobalPosition = Spawn.GlobalPosition;
+            player.GlobalPosition = CheckPoint?.Spawn.GlobalPosition ?? Spawn.GlobalPosition;
             AssignCamera(player);
         }
         
@@ -40,7 +43,7 @@ namespace ld47.Scenes
 
         private void OnNewPlayer()
         {
-            InitializePlayer();
+            SpawnPlayer();
         }
 
         private void AssignCamera(Node2D target)
@@ -48,6 +51,13 @@ namespace ld47.Scenes
             var parent = Camera.GetParent();
             parent?.RemoveChild(Camera);
             target.AddChild(Camera);
+        }
+
+        private void OnActivateCheckPoint(CheckPoint checkPoint)
+        {
+            CheckPoint?.Disable();
+            CheckPoint = checkPoint;
+            CheckPoint.Enable();
         }
     }
 }

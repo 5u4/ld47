@@ -1,4 +1,5 @@
 using Godot;
+using ld47.Environments.CheckPoint;
 using ld47.Instances.Player;
 
 namespace ld47.Utils
@@ -12,5 +13,6 @@ namespace ld47.Utils
         public static Emitter Instance { get; } = new Emitter();
 
         [Signal] public delegate void NewPlayerSignal();
+        [Signal] public delegate void ActivateCheckPoint(CheckPoint checkPoint);
     }
 }

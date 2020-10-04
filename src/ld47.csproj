@@ -57,6 +57,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Environments\CheckPoint\CheckPoint.cs" />
     <Compile Include="Environments\Traps\Doors\Button.cs" />
     <Compile Include="Environments\Traps\Doors\Door.cs" />
     <Compile Include="Environments\Traps\Spikes\Spike.cs" />

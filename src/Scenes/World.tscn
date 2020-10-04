@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Environments/Terrains/Terrain.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/World.cs" type="Script" id=2]
 [ext_resource path="res://Environments/Traps/Spikes/Spike.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Environments/Traps/Doors/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Environments/Traps/Doors/Button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Environments/CheckPoint/CheckPoint.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
@@ -64,6 +65,17 @@ position = Vector2( 584, 240 )
 DoorPath = NodePath("../Door")
 
 [node name="Corpses" type="Node2D" parent="."]
+
+[node name="CheckPoints" type="Node2D" parent="."]
+
+[node name="CheckPoint" parent="CheckPoints" instance=ExtResource( 6 )]
+position = Vector2( 168, 208 )
+
+[node name="CheckPoint2" parent="CheckPoints" instance=ExtResource( 6 )]
+position = Vector2( 472, 240 )
+
+[node name="CheckPoint3" parent="CheckPoints" instance=ExtResource( 6 )]
+position = Vector2( 616, 208 )
 
 [node name="Spawn" type="Position2D" parent="."]
 position = Vector2( 104, 168 )
