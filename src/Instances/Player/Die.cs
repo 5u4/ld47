@@ -48,6 +48,7 @@ namespace ld47.Instances.Player
             var world = Player.GetParent<Scenes.World>();
             world.RemoveChild(Player);
             world.Corpses.AddChild(Player);
+            Player.Velocity = Vector2.Zero;
         }
     }
 }
