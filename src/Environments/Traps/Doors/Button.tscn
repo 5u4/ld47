@@ -1,7 +1,8 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/Traps/Doors/button.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Environments/Traps/Doors/button.png" type="Texture" id=1]
 [ext_resource path="res://Environments/Traps/Doors/Button.cs" type="Script" id=2]
+
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 8, 2 )
