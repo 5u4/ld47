@@ -38,17 +38,8 @@ namespace ld47.Instances.Player
             {
                 Emitter.Instance.EmitSignal(nameof(Emitter.NewPlayerSignal));
                 Landed = true;
-                MoveToCorpses();
             }
             PreviousVelocity = Player.Velocity;
-        }
-
-        private void MoveToCorpses()
-        {
-            var world = Player.GetParent<Scenes.World>();
-            world.RemoveChild(Player);
-            world.Corpses.AddChild(Player);
-            Player.Velocity = Vector2.Zero;
         }
     }
 }
