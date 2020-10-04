@@ -1,4 +1,5 @@
 using Godot;
+using System.Linq;
 using ld47.Instances.Player;
 
 namespace ld47.Environments.Traps.Doors
@@ -38,7 +39,8 @@ namespace ld47.Environments.Traps.Doors
 
         private void OnBodyExited(Node body)
         {
-            if (!(body is Player)) return;
+            if (!(body is Player player) 
+                || GetOverlappingBodies().OfType<Player>().Any(p => p != player)) return;
             TurnOff();
         }
     }
