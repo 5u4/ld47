@@ -232,7 +232,7 @@ position = Vector2( 480, 112 )
 position = Vector2( 744, 112 )
 
 [node name="Spawn" type="Position2D" parent="."]
-position = Vector2( -680, 72 )
+position = Vector2( -696, 40 )
 
 [node name="Game1Ending" parent="." instance=ExtResource( 2 )]
 position = Vector2( 852, -8 )
