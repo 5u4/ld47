@@ -1,5 +1,6 @@
 using Godot;
 using ld47.Instances.Player;
+using ld47.Scenes;
 using ld47.Utils;
 
 namespace ld47.Environments.Traps.Spikes
@@ -19,6 +20,7 @@ namespace ld47.Environments.Traps.Spikes
         {
             if (!(body is Player player) || player.Die.Enabled) return;
             player.Die.Enable();
+            Emitter.Instance.EmitSignal(nameof(Emitter.DeathSignal));
         }
     }
 }
