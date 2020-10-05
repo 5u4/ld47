@@ -10,7 +10,7 @@
 [node name="Map" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource( 3 )]
-tile_data = PoolIntArray( -458777, 10, 0, -458776, 10, 0, -458775, 10, 0, -458774, 10, 0, -458773, 10, 0, -393241, 10, 0, -327705, 10, 0, -327682, 10, 0, -327681, 10, 0, -393216, 10, 0, -393215, 10, 0, -393214, 10, 0, -393213, 10, 0, -393212, 10, 0, -393211, 10, 0, -393210, 10, 0, -393209, 10, 0, -393208, 10, 0, -393207, 10, 0, -393206, 10, 0, -393205, 10, 0, -262169, 10, 0, -327679, 10, 0, -327678, 10, 0, -327677, 10, 0, -327676, 10, 0, -327675, 10, 0, -327674, 10, 0, -327673, 10, 0, -196633, 10, 0, -262140, 10, 0, -262139, 10, 0, -262138, 10, 0, -131097, 10, 0, -65561, 10, 0, -131056, 10, 0, -131055, 10, 0, -131054, 10, 0, -131053, 10, 0, -131052, 10, 0, -131051, 10, 0, -131050, 10, 0, -131049, 10, 0, -131048, 10, 0, -131047, 10, 0, -25, 10, 0, -65528, 10, 0, -65527, 10, 0, -65526, 10, 0, -65525, 10, 0, -65511, 10, 0, 65511, 10, 0, 25, 10, 0, 131047, 10, 0, 65561, 10, 0, 196583, 10, 0, 131097, 10, 0, 262119, 10, 0, 262137, 10, 0, 262138, 10, 0, 262139, 10, 0, 262140, 10, 0, 262141, 10, 0, 196609, 10, 0, 196610, 10, 0, 196611, 10, 0, 196612, 10, 0, 196613, 10, 0, 196614, 10, 0, 196615, 10, 0, 196616, 10, 0, 196617, 10, 0, 196618, 10, 0, 196619, 10, 0, 196620, 10, 0, 196621, 10, 0, 196622, 10, 0, 196623, 10, 0, 196627, 10, 0, 196631, 10, 0, 196632, 10, 0, 196633, 10, 0, 327655, 10, 0, 327656, 10, 0, 327657, 10, 0, 327658, 10, 0, 327659, 10, 0, 327660, 10, 0, 327661, 10, 0, 327662, 10, 0, 327663, 10, 0, 327673, 10, 0, 327677, 10, 0, 262145, 10, 0, 262159, 10, 0, 262163, 10, 0, 262169, 10, 0, 393199, 10, 0, 393209, 10, 0, 393213, 10, 0, 327681, 10, 0, 327695, 10, 0, 327699, 10, 0, 327705, 10, 0, 458735, 10, 0, 458745, 10, 0, 458749, 10, 0, 393217, 10, 0, 393231, 10, 0, 393235, 10, 0, 393241, 10, 0, 524271, 10, 0, 524272, 10, 0, 524273, 10, 0, 524274, 10, 0, 524275, 10, 0, 524276, 10, 0, 524277, 10, 0, 524278, 10, 0, 524279, 10, 0, 524280, 10, 0, 524281, 10, 0, 524285, 10, 0, 458753, 10, 0, 458767, 10, 0, 458768, 10, 0, 458769, 10, 0, 458770, 10, 0, 458771, 10, 0, 458777, 10, 0, 589821, 10, 0, 589822, 10, 0, 589823, 10, 0, 524288, 10, 0, 524289, 10, 0, 524313, 10, 0, 589849, 10, 0, 655385, 10, 0, 720912, 10, 0, 720913, 10, 0, 720914, 10, 0, 720915, 10, 0, 720916, 10, 0, 720917, 10, 0, 720918, 10, 0, 720919, 10, 0, 720920, 10, 0, 720921, 10, 0 )
+tile_data = PoolIntArray( -458777, 10, 0, -458776, 10, 0, -458775, 10, 0, -458774, 10, 0, -458773, 10, 0, -393241, 10, 0, -327705, 10, 0, -327682, 10, 0, -327681, 10, 0, -393216, 10, 0, -393215, 10, 0, -393214, 10, 0, -393213, 10, 0, -393212, 10, 0, -393211, 10, 0, -393210, 10, 0, -393209, 10, 0, -393208, 10, 0, -393207, 10, 0, -393206, 10, 0, -393205, 10, 0, -262169, 10, 0, -327679, 10, 0, -327678, 10, 0, -327677, 10, 0, -327676, 10, 0, -327675, 10, 0, -327674, 10, 0, -327673, 10, 0, -196633, 10, 0, -262140, 10, 0, -262139, 10, 0, -262138, 10, 0, -131097, 10, 0, -65561, 10, 0, -131056, 10, 0, -131055, 10, 0, -131054, 10, 0, -131053, 10, 0, -131052, 10, 0, -131051, 10, 0, -131050, 10, 0, -131049, 10, 0, -131048, 10, 0, -131047, 10, 0, -25, 10, 0, -65528, 10, 0, -65527, 10, 0, -65526, 10, 0, -65525, 10, 0, -65511, 10, 0, 65511, 10, 0, 25, 10, 0, 131047, 10, 0, 65561, 10, 0, 196583, 10, 0, 131097, 10, 0, 262119, 10, 0, 262137, 10, 0, 262138, 10, 0, 262139, 10, 0, 262140, 10, 0, 262141, 10, 0, 196609, 10, 0, 196610, 10, 0, 196611, 10, 0, 196612, 10, 0, 196613, 10, 0, 196614, 10, 0, 196615, 10, 0, 196616, 10, 0, 196617, 10, 0, 196618, 10, 0, 196619, 10, 0, 196620, 10, 0, 196621, 10, 0, 196622, 10, 0, 196623, 10, 0, 196627, 10, 0, 196628, 10, 0, 196630, 10, 0, 196631, 10, 0, 196632, 10, 0, 196633, 10, 0, 327655, 10, 0, 327656, 10, 0, 327657, 10, 0, 327658, 10, 0, 327659, 10, 0, 327660, 10, 0, 327661, 10, 0, 327662, 10, 0, 327663, 10, 0, 327673, 10, 0, 327677, 10, 0, 262145, 10, 0, 262159, 10, 0, 262163, 10, 0, 262169, 10, 0, 393199, 10, 0, 393209, 10, 0, 393213, 10, 0, 327681, 10, 0, 327695, 10, 0, 327699, 10, 0, 327705, 10, 0, 458735, 10, 0, 458745, 10, 0, 458749, 10, 0, 393217, 10, 0, 393231, 10, 0, 393235, 10, 0, 393241, 10, 0, 524271, 10, 0, 524272, 10, 0, 524273, 10, 0, 524274, 10, 0, 524275, 10, 0, 524276, 10, 0, 524277, 10, 0, 524278, 10, 0, 524279, 10, 0, 524280, 10, 0, 524281, 10, 0, 524285, 10, 0, 458753, 10, 0, 458767, 10, 0, 458771, 10, 0, 458777, 10, 0, 589821, 10, 0, 524289, 10, 0, 524303, 10, 0, 524307, 10, 0, 524313, 10, 0, 655357, 10, 0, 589825, 10, 0, 589839, 10, 0, 589843, 10, 0, 589849, 10, 0, 720893, 10, 0, 655361, 10, 0, 655375, 10, 0, 655379, 10, 0, 655385, 10, 0, 786429, 10, 0, 786430, 10, 0, 786431, 10, 0, 720896, 10, 0, 720897, 10, 0, 720903, 10, 0, 720905, 10, 0, 720911, 10, 0, 720912, 10, 0, 720913, 10, 0, 720914, 10, 0, 720915, 10, 0, 720921, 10, 0, 786457, 10, 0, 851993, 10, 0, 917529, 10, 0, 983065, 10, 0, 1048601, 10, 0, 1114113, 10, 0, 1114114, 10, 0, 1114115, 10, 0, 1114116, 10, 0, 1114117, 10, 0, 1114118, 10, 0, 1114119, 10, 0, 1114120, 10, 0, 1114121, 10, 0, 1114122, 10, 0, 1114123, 10, 0, 1114124, 10, 0, 1114125, 10, 0, 1114126, 10, 0, 1114127, 10, 0, 1114128, 10, 0, 1114129, 10, 0, 1114130, 10, 0, 1114131, 10, 0, 1114132, 10, 0, 1114133, 10, 0, 1114134, 10, 0, 1114135, 10, 0, 1114136, 10, 0, 1114137, 10, 0 )
 
 [node name="Traps" type="Node2D" parent="."]
 
@@ -68,10 +68,10 @@ position = Vector2( 280, -16 )
 rotation = -3.14159
 
 [node name="Spike3" parent="Traps/Node2D3" instance=ExtResource( 6 )]
-position = Vector2( 264, 112 )
+position = Vector2( 264, 176 )
 
 [node name="Spike4" parent="Traps/Node2D3" instance=ExtResource( 6 )]
-position = Vector2( 296, 112 )
+position = Vector2( 296, 176 )
 
 [node name="Interactables" type="Node2D" parent="."]
 
@@ -103,36 +103,36 @@ ConnectedDoorPath = NodePath("../Door6")
 position = Vector2( -48, -56 )
 
 [node name="Button2" parent="Interactables" instance=ExtResource( 5 )]
-position = Vector2( -8, 128 )
+position = Vector2( -7.99998, 176 )
 DoorPath = NodePath("Door")
 
 [node name="Door" parent="Interactables/Button2" instance=ExtResource( 4 )]
-position = Vector2( 96, -88 )
+position = Vector2( 96, -136 )
 rotation = -1.5708
 ConnectedDoorPath = NodePath("../Door2")
 
 [node name="Door2" parent="Interactables/Button2" instance=ExtResource( 4 )]
-position = Vector2( 96, -104 )
+position = Vector2( 96, -152 )
 rotation = -1.5708
 ConnectedDoorPath = NodePath("../Door3")
 
 [node name="Door3" parent="Interactables/Button2" instance=ExtResource( 4 )]
-position = Vector2( 96, -120 )
+position = Vector2( 96, -168 )
 rotation = -1.5708
 ConnectedDoorPath = NodePath("../Door4")
 
 [node name="Door4" parent="Interactables/Button2" instance=ExtResource( 4 )]
-position = Vector2( 96, -136 )
+position = Vector2( 96, -184 )
 rotation = -1.5708
 ConnectedDoorPath = NodePath("../Door5")
 
 [node name="Door5" parent="Interactables/Button2" instance=ExtResource( 4 )]
-position = Vector2( 96, -152 )
+position = Vector2( 96, -200 )
 rotation = -1.5708
 ConnectedDoorPath = NodePath("../Door6")
 
 [node name="Door6" parent="Interactables/Button2" instance=ExtResource( 4 )]
-position = Vector2( 96, -168 )
+position = Vector2( 96, -216 )
 rotation = -1.5708
 
 [node name="Button3" parent="Interactables" instance=ExtResource( 5 )]
@@ -151,19 +151,62 @@ ConnectedDoorPath = NodePath("../Door3")
 position = Vector2( 136, 72 )
 
 [node name="Button4" parent="Interactables" instance=ExtResource( 5 )]
-position = Vector2( 280, 112 )
+position = Vector2( 280, 176 )
 DoorPath = NodePath("Door")
 
 [node name="Door" parent="Interactables/Button4" instance=ExtResource( 4 )]
-position = Vector2( 48, -56 )
+position = Vector2( 64, -120 )
+ConnectedDoorPath = NodePath("")
+
+[node name="Button5" parent="Interactables" instance=ExtResource( 5 )]
+position = Vector2( 248, 192 )
+rotation = 3.14159
+DoorPath = NodePath("Door")
+Reversed = true
+
+[node name="Door" parent="Interactables/Button5" instance=ExtResource( 4 )]
+position = Vector2( 16, 7.99999 )
 ConnectedDoorPath = NodePath("../Door2")
 
-[node name="Door2" parent="Interactables/Button4" instance=ExtResource( 4 )]
-position = Vector2( 64, -56 )
+[node name="Door2" parent="Interactables/Button5" instance=ExtResource( 4 )]
+position = Vector2( 48, 7.99997 )
 ConnectedDoorPath = NodePath("../Door3")
 
-[node name="Door3" parent="Interactables/Button4" instance=ExtResource( 4 )]
-position = Vector2( 80, -56 )
+[node name="Door3" parent="Interactables/Button5" instance=ExtResource( 4 )]
+position = Vector2( 80, 7.99997 )
+ConnectedDoorPath = NodePath("../Door4")
+
+[node name="Door4" parent="Interactables/Button5" instance=ExtResource( 4 )]
+position = Vector2( 112, 7.99997 )
+ConnectedDoorPath = NodePath("../Door5")
+
+[node name="Door5" parent="Interactables/Button5" instance=ExtResource( 4 )]
+position = Vector2( 144, 7.99996 )
+ConnectedDoorPath = NodePath("../Door6")
+
+[node name="Door6" parent="Interactables/Button5" instance=ExtResource( 4 )]
+position = Vector2( 176, 7.99996 )
+ConnectedDoorPath = NodePath("../Door7")
+
+[node name="Door7" parent="Interactables/Button5" instance=ExtResource( 4 )]
+position = Vector2( 208, 7.99994 )
+
+[node name="Button6" parent="Interactables" instance=ExtResource( 5 )]
+position = Vector2( 384, 64 )
+rotation = 3.14159
+DoorPath = NodePath("Door")
+Reversed = true
+
+[node name="Door" parent="Interactables/Button6" instance=ExtResource( 4 )]
+position = Vector2( 56, -48 )
+ConnectedDoorPath = NodePath("../Door2")
+
+[node name="Door2" parent="Interactables/Button6" instance=ExtResource( 4 )]
+position = Vector2( -8.00003, -88 )
+ConnectedDoorPath = NodePath("../Door3")
+
+[node name="Door3" parent="Interactables/Button6" instance=ExtResource( 4 )]
+position = Vector2( 56, -120 )
 
 [node name="CheckPoints" type="Node2D" parent="."]
 
@@ -173,8 +216,12 @@ position = Vector2( -72, 48 )
 [node name="CheckPoint2" parent="CheckPoints" instance=ExtResource( 1 )]
 position = Vector2( 104, 48 )
 
+[node name="CheckPoint3" parent="CheckPoints" instance=ExtResource( 1 )]
+position = Vector2( 280, 192 )
+rotation = 3.14159
+
 [node name="Spawn" type="Position2D" parent="."]
-position = Vector2( -336, 24 )
+position = Vector2( 104, 16 )
 
 [node name="Game1Ending" parent="." instance=ExtResource( 2 )]
-position = Vector2( 344, 112 )
+position = Vector2( 344, 80 )
