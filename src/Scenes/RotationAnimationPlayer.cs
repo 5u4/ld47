@@ -5,19 +5,17 @@ namespace ld47.Scenes
 {
     public class RotationAnimationPlayer : AnimationPlayer
     {
-        public bool Played;
-        
-        public void Start(Player player)
+        public void Start(Player player, bool upsideDown = true)
         {
-            if (Played) return;
-            Played = true;
-            AssignCameraPosition(player);
-            Play("Rotate");
+            if (IsPlaying()) return;
+            var anim = upsideDown ? "Rotate" : "RotateBack";
+            AssignCameraPosition(player, anim);
+            Play(anim);
         }
 
-        private void AssignCameraPosition(Node2D target)
+        private void AssignCameraPosition(Node2D target, string animation)
         {
-            var anim = GetAnimation("Rotate");
+            var anim = GetAnimation(animation);
             var id = anim.FindTrack("MainCamera:position");
             var pos = target.GlobalPosition;
             anim.TrackSetKeyValue(id, anim.TrackFindKey(id, 0), pos);

@@ -15,6 +15,7 @@ namespace ld47.Utils
         [Signal] public delegate void NewPlayerSignal();
         [Signal] public delegate void ActivateCheckPoint(CheckPoint checkPoint);
         [Signal] public delegate void Finish1Game();
+        [Signal] public delegate void Finish2Game();
         [Signal] public delegate void DeathSignal();
     }
 }

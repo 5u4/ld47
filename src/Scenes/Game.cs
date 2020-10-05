@@ -32,6 +32,7 @@ namespace ld47.Scenes
             Emitter.Instance.Connect(nameof(Emitter.NewPlayerSignal), this, nameof(OnNewPlayer));
             Emitter.Instance.Connect(nameof(Emitter.ActivateCheckPoint), this, nameof(OnActivateCheckPoint));
             Emitter.Instance.Connect(nameof(Emitter.Finish1Game), this, nameof(OnFinish1Game));
+            Emitter.Instance.Connect(nameof(Emitter.Finish2Game), this, nameof(OnFinish2Game));
 
             SpawnPlayer();
         }
@@ -98,7 +99,6 @@ namespace ld47.Scenes
             await ToSignal(RotationAnimationPlayer, "animation_finished");
             AssignCamera(Player);
             Player.GlobalPosition += Vector2.Up * 10;
-            RotationAnimationPlayer.QueueFree();
             CheckPoint = null;
             
             EnabledSuicide = true;
@@ -107,6 +107,28 @@ namespace ld47.Scenes
             
             Player.Rotation = Mathf.Pi; // TODO: Add to animation
             Player.Suicide.Enabled = true;
+            
+            Player.ActionLock.Unlock();
+        }
+
+        private async void OnFinish2Game()
+        {
+            var pos = Camera.GlobalPosition;
+            Camera.GetParent()?.RemoveChild(Camera);
+            Camera.GlobalPosition = pos;
+            AddChild(Camera);
+            
+            RotationAnimationPlayer.Start(Player, false);
+            Player.ActionLock.Lock();
+            Player.Velocity = Vector2.Zero;
+            await ToSignal(RotationAnimationPlayer, "animation_finished");
+            AssignCamera(Player);
+            Player.GlobalPosition += Vector2.Up * 10;
+            CheckPoint = null;
+            
+            UpsideDown = false;
+            
+            Player.Rotation = 0;
             
             Player.ActionLock.Unlock();
         }
