@@ -32,9 +32,6 @@ namespace ld47.Instances.Player
             PreviousVelocity = Player.Velocity;
             Player.Velocity.y = DeadJumpSpeed;
             Player.Velocity.x = 0;
-            var color = Player.AnimatedSprite.Modulate;
-            color.a = 1;
-            Player.AnimatedSprite.Modulate = color;
             GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D").Play();
         }
 
