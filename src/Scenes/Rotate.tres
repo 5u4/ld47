@@ -37,7 +37,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 2.5, 4.3, 4.7 ),
 "transitions": PoolRealArray( 1, 2, 0.5, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 190.0, 180.0 ]
+"values": [ 0.0, 0.0, 185.0, 180.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Corpses:rotation_degrees")
@@ -49,7 +49,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 2.5, 4.3, 4.7 ),
 "transitions": PoolRealArray( 1, 2, 0.5, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 190.0, 180.0 ]
+"values": [ 0.0, 0.0, 185.0, 180.0 ]
 }
 tracks/4/type = "method"
 tracks/4/path = NodePath(".")

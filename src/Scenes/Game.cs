@@ -15,6 +15,8 @@ namespace ld47.Scenes
         public Node2D Map;
         public Player Player;
         public RotationAnimationPlayer RotationAnimationPlayer;
+        public bool EnabledSuicide;
+        public bool UpsideDown;
 
         public override void _Ready()
         {
@@ -38,6 +40,8 @@ namespace ld47.Scenes
             Map.AddChild(Player);
             Player.GlobalPosition = CheckPoint?.Spawn.GlobalPosition ?? Spawn.GlobalPosition;
             AssignCamera(Player);
+            if (EnabledSuicide) Player.Suicide.Enabled = true;
+            if (UpsideDown) Player.Rotation = Mathf.Pi;
         }
         
         public Player CreatePlayer()
@@ -59,8 +63,8 @@ namespace ld47.Scenes
             var pos = Player.GlobalPosition;
             var parent = Player.GetParent<Node>();
             parent.RemoveChild(Player);
-            Player.GlobalPosition = pos;
             Corpses.AddChild(Player);
+            Player.GlobalPosition = pos;
             Player.Velocity = Vector2.Zero;
         }
 
@@ -86,11 +90,21 @@ namespace ld47.Scenes
             Camera.GlobalPosition = pos;
             AddChild(Camera);
             RotationAnimationPlayer.Start(Player);
+            Player.ActionLock.Lock();
+            Player.Velocity = Vector2.Zero;
             await ToSignal(RotationAnimationPlayer, "animation_finished");
             AssignCamera(Player);
-            Player.Rotation = Mathf.Pi; // TODO: Add to animation
             Player.GlobalPosition += Vector2.Up * 10;
             RotationAnimationPlayer.QueueFree();
+            CheckPoint = null;
+            
+            EnabledSuicide = true;
+            UpsideDown = true;
+            
+            Player.Rotation = Mathf.Pi; // TODO: Add to animation
+            Player.Suicide.Enabled = true;
+            
+            Player.ActionLock.Unlock();
         }
 
         private void StopPhysics()

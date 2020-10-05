@@ -68,6 +68,7 @@
     <Compile Include="Instances\Player\Jump.cs" />
     <Compile Include="Instances\Player\Player.cs" />
     <Compile Include="Instances\Player\Run.cs" />
+    <Compile Include="Instances\Player\Suicide.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scenes\Game1Ending.cs" />
     <Compile Include="Scenes\Game.cs" />

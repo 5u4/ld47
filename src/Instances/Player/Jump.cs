@@ -18,6 +18,7 @@ namespace ld47.Instances.Player
         // TODO: hold jump higher
         public override void _PhysicsProcess(float delta)
         {
+            if (Player.ActionLock.IsLocked) return;
             base._PhysicsProcess(delta);
             Coyote -= delta;
             var onFloor = Player.IsOnFloor();

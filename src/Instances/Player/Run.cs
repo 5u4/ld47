@@ -18,6 +18,7 @@ namespace ld47.Instances.Player
         public override void _PhysicsProcess(float delta)
         {
             if (Player.ActionLock.IsLocked) return;
+            base._PhysicsProcess(delta);
             var direction = Input.GetActionStrength("ui_right") - Input.GetActionStrength("ui_left");
             Player.Velocity.x = Mathf.Abs(direction) > 0
                 ? Mathf.Lerp(Player.Velocity.x, direction * Speed, Acceleration)

@@ -1,5 +1,4 @@
 using Godot;
-using ld47.Scenes;
 using ld47.Utils;
 
 namespace ld47.Instances.Player
@@ -10,7 +9,8 @@ namespace ld47.Instances.Player
         public bool Enabled;
         public bool Landed;
         public Vector2 PreviousVelocity;
-        
+        public const float DeadJumpSpeed = -200f;
+
         public override void _Ready()
         {
             base._Ready();
@@ -26,9 +26,12 @@ namespace ld47.Instances.Player
 
         public void Enable()
         {
+            if (Enabled) return;
             Player.ActionLock.Lock();
             Enabled = true;
             PreviousVelocity = Player.Velocity;
+            Player.Velocity.y = DeadJumpSpeed;
+            Player.Velocity.x = 0;
         }
 
         private void HandleLand()

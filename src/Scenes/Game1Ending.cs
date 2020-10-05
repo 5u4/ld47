@@ -20,6 +20,7 @@ namespace ld47.Scenes
         {
             if (!(body is Player)) return;
             Emitter.Instance.EmitSignal(nameof(Emitter.Finish1Game));
+            ((Game) GetTree().CurrentScene).Spawn.GlobalPosition = GlobalPosition;
             QueueFree();
         }
     }
