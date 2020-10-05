@@ -65,9 +65,18 @@ namespace ld47.Scenes
             var pos = Player.GlobalPosition;
             var parent = Player.GetParent<Node>();
             parent.RemoveChild(Player);
+            ClearCorpses();
             Corpses.AddChild(Player);
             Player.GlobalPosition = pos;
             Player.Velocity = Vector2.Zero;
+        }
+
+        private void ClearCorpses()
+        {
+            foreach (Player corpses in Corpses.GetChildren())
+            {
+                corpses.Animation.Fade = true;
+            }
         }
 
         private void AssignCamera(Node2D target)

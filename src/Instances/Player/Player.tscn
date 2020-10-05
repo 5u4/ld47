@@ -1,5 +1,6 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
+[ext_resource path="res://Instances/Player/PlayerAnimFade.tres" type="Animation" id=1]
 [ext_resource path="res://Assets/Instances/Player/Run.png" type="Texture" id=2]
 [ext_resource path="res://Instances/Player/PlayerAnimationTree.tres" type="AnimationNodeStateMachine" id=3]
 [ext_resource path="res://Instances/Player/PlayerAnimIdle.tres" type="Animation" id=4]
@@ -19,48 +20,48 @@
 [ext_resource path="res://Instances/Player/PlayerAnimHit.tres" type="Animation" id=20]
 [ext_resource path="res://Instances/Player/Suicide.cs" type="Script" id=21]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=14]
 radius = 7.0
 height = 0.0
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 7, 4 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 100, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 18 )
 region = Rect2( 0, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 17 )
 region = Rect2( 0, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 17 )
 region = Rect2( 32, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 17 )
 region = Rect2( 64, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 17 )
 region = Rect2( 96, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 17 )
 region = Rect2( 128, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=23]
 atlas = ExtResource( 17 )
 region = Rect2( 160, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=24]
 atlas = ExtResource( 17 )
 region = Rect2( 192, 0, 32, 32 )
 
@@ -74,64 +75,64 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 100, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=25]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 200, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=26]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 100, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=28]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 200, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 300, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=30]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 400, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 500, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 600, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 700, 0, 100, 100 )
 
-[sub_resource type="SpriteFrames" id=23]
+[sub_resource type="SpriteFrames" id=34]
 animations = [ {
-"frames": [ SubResource( 3 ) ],
+"frames": [ SubResource( 16 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 4 ) ],
+"frames": [ SubResource( 17 ) ],
 "loop": true,
 "name": "Dead",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": false,
 "name": "Hit",
 "speed": 12.0
@@ -141,38 +142,39 @@ animations = [ {
 "name": "Idle",
 "speed": 2.0
 }, {
-"frames": [ SubResource( 14 ) ],
+"frames": [ SubResource( 25 ) ],
 "loop": true,
 "name": "Fall",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
 "loop": true,
 "name": "Run",
 "speed": 7.0
 } ]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=24]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=35]
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 8 )
-shape = SubResource( 1 )
+shape = SubResource( 14 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 15 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.38, 0.38 )
-frames = SubResource( 23 )
+frames = SubResource( 34 )
 animation = "Idle"
 
 [node name="Tween" type="Tween" parent="AnimatedSprite"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Dead = ExtResource( 19 )
+anims/Fade = ExtResource( 1 )
 anims/Fall = ExtResource( 12 )
 anims/Hit = ExtResource( 20 )
 anims/Idle = ExtResource( 4 )
@@ -183,7 +185,7 @@ anims/Run = ExtResource( 5 )
 tree_root = ExtResource( 3 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 24 )
+parameters/playback = SubResource( 35 )
 
 [node name="Controllers" type="Node2D" parent="."]
 

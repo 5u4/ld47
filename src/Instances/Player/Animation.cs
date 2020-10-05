@@ -9,6 +9,7 @@ namespace ld47.Instances.Player
         public AnimationTree AnimationTree;
         public AnimationNodeStateMachinePlayback StateMachine;
         public const float RunningAnimThreshold = 10f;
+        public bool Fade;
 
         public override void _Ready()
         {
@@ -46,6 +47,7 @@ namespace ld47.Instances.Player
 
         private string GetAnimationState()
         {
+            if (Fade) return "Fade";
             if (Player.Die.Landed) return "Dead";
             if (Player.Die.Enabled) return "Hit";
             if (Player.IsOnFloor()) return Mathf.Abs(Player.Velocity.x) > RunningAnimThreshold ? "Run" : "Idle";

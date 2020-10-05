@@ -1,7 +1,10 @@
-[gd_resource type="AnimationNodeStateMachine" load_steps=24 format=2]
+[gd_resource type="AnimationNodeStateMachine" load_steps=26 format=2]
 
 [sub_resource type="AnimationNodeAnimation" id=1]
 animation = "Dead"
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "Fade"
 
 [sub_resource type="AnimationNodeAnimation" id=2]
 animation = "Fall"
@@ -52,9 +55,14 @@ animation = "Run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=23]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+switch_mode = 2
+
 [resource]
 states/Dead/node = SubResource( 1 )
 states/Dead/position = Vector2( 971, 112 )
+states/Fade/node = SubResource( 24 )
+states/Fade/position = Vector2( 954, 209 )
 states/Fall/node = SubResource( 2 )
 states/Fall/position = Vector2( 471, 78 )
 states/Hit/node = SubResource( 3 )
@@ -65,7 +73,7 @@ states/Jump/node = SubResource( 5 )
 states/Jump/position = Vector2( 753, 192 )
 states/Run/node = SubResource( 6 )
 states/Run/position = Vector2( 538, 357 )
-transitions = [ "Idle", "Run", SubResource( 7 ), "Run", "Idle", SubResource( 8 ), "Fall", "Idle", SubResource( 9 ), "Idle", "Fall", SubResource( 10 ), "Idle", "Jump", SubResource( 11 ), "Jump", "Idle", SubResource( 12 ), "Run", "Jump", SubResource( 13 ), "Jump", "Run", SubResource( 14 ), "Jump", "Fall", SubResource( 15 ), "Fall", "Jump", SubResource( 16 ), "Run", "Fall", SubResource( 17 ), "Fall", "Run", SubResource( 18 ), "Fall", "Hit", SubResource( 19 ), "Jump", "Hit", SubResource( 20 ), "Run", "Hit", SubResource( 21 ), "Hit", "Dead", SubResource( 22 ), "Idle", "Hit", SubResource( 23 ) ]
+transitions = [ "Idle", "Run", SubResource( 7 ), "Run", "Idle", SubResource( 8 ), "Fall", "Idle", SubResource( 9 ), "Idle", "Fall", SubResource( 10 ), "Idle", "Jump", SubResource( 11 ), "Jump", "Idle", SubResource( 12 ), "Run", "Jump", SubResource( 13 ), "Jump", "Run", SubResource( 14 ), "Jump", "Fall", SubResource( 15 ), "Fall", "Jump", SubResource( 16 ), "Run", "Fall", SubResource( 17 ), "Fall", "Run", SubResource( 18 ), "Fall", "Hit", SubResource( 19 ), "Jump", "Hit", SubResource( 20 ), "Run", "Hit", SubResource( 21 ), "Hit", "Dead", SubResource( 22 ), "Idle", "Hit", SubResource( 23 ), "Dead", "Fade", SubResource( 25 ) ]
 start_node = "Idle"
-end_node = "Dead"
+end_node = "Fade"
 graph_offset = Vector2( 26, 24 )
