@@ -44,7 +44,6 @@ region_rect = Rect2( 0, 0, 1600, 740 )
 
 [node name="MainCamera" parent="." instance=ExtResource( 2 )]
 pause_mode = 2
-zoom = Vector2( 1.5, 1.5 )
 
 [node name="RotationAnimationPlayer" type="AnimationPlayer" parent="."]
 pause_mode = 2

@@ -69,5 +69,5 @@ ui_suicide={
 
 [rendering]
 
-environment/default_clear_color=Color( 0.054902, 0.054902, 0.054902, 1 )
+environment/default_clear_color=Color( 0.129412, 0.121569, 0.188235, 1 )
 environment/default_environment="res://default_env.tres"
