@@ -35,6 +35,7 @@ scroll_base_scale = Vector2( 0.5, 0.2 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Map/ParallaxBackground"]
 
 [node name="Sprite" type="Sprite" parent="Map/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.647059 )
 texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1600, 740 )
