@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Environments\CheckPoint\CheckPoint.cs" />
+    <Compile Include="Environments\Goal\Banana.cs" />
     <Compile Include="Environments\Plates\Plate.cs" />
     <Compile Include="Environments\Traps\Doors\Button.cs" />
     <Compile Include="Environments\Traps\Doors\Door.cs" />
