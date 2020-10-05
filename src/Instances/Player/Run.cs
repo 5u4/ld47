@@ -5,7 +5,7 @@ namespace ld47.Instances.Player
     public class Run : Node2D
     {
         public Player Player;
-        public const float Speed = 120;
+        public const float Speed = 100;
         public const float Acceleration = 0.5f;
         public const float Friction = 0.2f;
         

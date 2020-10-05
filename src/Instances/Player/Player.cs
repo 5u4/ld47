@@ -9,6 +9,7 @@ namespace ld47.Instances.Player
         public Animation Animation;
         public Gravity Gravity;
         public Run Run;
+        public Jump Jump;
         public Die Die;
         public Suicide Suicide;
         public AnimatedSprite AnimatedSprite;
@@ -21,6 +22,7 @@ namespace ld47.Instances.Player
             Animation = GetNode<Animation>("Controllers/Animation");
             Gravity = GetNode<Gravity>("Controllers/Gravity");
             Run = GetNode<Run>("Controllers/Run");
+            Jump = GetNode<Jump>("Controllers/Jump");
             Die = GetNode<Die>("Controllers/Die");
             Suicide = GetNode<Suicide>("Controllers/Suicide");
             AnimatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");

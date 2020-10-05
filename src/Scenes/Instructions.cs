@@ -1,4 +1,5 @@
 using Godot;
+using ld47.Instances.Player;
 
 namespace ld47.Scenes
 {
@@ -6,7 +7,7 @@ namespace ld47.Scenes
     {
         public float CountDown;
         public Color Color;
-        public bool Falling;
+        public bool Fading;
 
         public override void _Ready()
         {
@@ -17,16 +18,16 @@ namespace ld47.Scenes
         public override void _Process(float delta)
         {
             base._Process(delta);
-            CountDown = Falling ? Mathf.Max(CountDown - delta, -2) : Mathf.Min(CountDown + delta, 1);
-            if (CountDown < -1.5f) Falling = false;
+            UpdateFade();
+            CountDown = Fading ? Mathf.Max(CountDown - delta, -2) : Mathf.Min(CountDown + delta, 1);
             Color.a = Mathf.Clamp(CountDown, 0, 1);
             Modulate = Color;
         }
 
-        public override void _Input(InputEvent @event)
+        public void UpdateFade()
         {
-            base._Input(@event);
-            Falling = @event is InputEventKey;
+            Fading = Input.IsActionPressed("ui_left") || Input.IsActionPressed("ui_right") ||
+                     Input.IsActionPressed("ui_jump") || Input.IsActionPressed("ui_suicide");
         }
     }
 }
