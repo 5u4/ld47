@@ -35,6 +35,7 @@ namespace ld47.Instances.Player
             var color = Player.AnimatedSprite.Modulate;
             color.a = 1;
             Player.AnimatedSprite.Modulate = color;
+            GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D").Play();
         }
 
         private void HandleLand()

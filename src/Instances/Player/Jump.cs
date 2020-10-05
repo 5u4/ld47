@@ -29,6 +29,7 @@ namespace ld47.Instances.Player
             var canJump = onFloor || Coyote > 0;
             if (!canJump) return;
             Player.Velocity.y = -JumpHeight;
+            GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D").Play();
             if (Player.IsOnFloor()) ParticlesEmit.Emit(0.1f);
         }
     }

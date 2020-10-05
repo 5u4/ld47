@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://Instances/Player/PlayerAnimFade.tres" type="Animation" id=1]
 [ext_resource path="res://Assets/Instances/Player/Run.png" type="Texture" id=2]
@@ -24,6 +24,8 @@
 [ext_resource path="res://Instances/Player/ParticlesEmit.cs" type="Script" id=22]
 [ext_resource path="res://Assets/Instances/Player/Idle.png" type="Texture" id=23]
 [ext_resource path="res://Assets/Instances/Player/Hit.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Audio/Jump.wav" type="AudioStream" id=25]
+[ext_resource path="res://Assets/Audio/Fall.wav" type="AudioStream" id=26]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.0
@@ -266,8 +268,14 @@ process_material = SubResource( 21 )
 texture = ExtResource( 10 )
 script = ExtResource( 22 )
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Controllers/Jump"]
+stream = ExtResource( 25 )
+
 [node name="Die" type="Node2D" parent="Controllers"]
 script = ExtResource( 16 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Controllers/Die"]
+stream = ExtResource( 26 )
 
 [node name="Suicide" type="Node2D" parent="Controllers"]
 script = ExtResource( 21 )

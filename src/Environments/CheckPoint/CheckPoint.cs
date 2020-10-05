@@ -21,6 +21,7 @@ namespace ld47.Environments.CheckPoint
         public void Enable()
         {
             AnimatedSprite.Play("Activated");
+            GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D").Play();
         }
 
         public void Disable()

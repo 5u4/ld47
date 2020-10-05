@@ -25,6 +25,7 @@ namespace ld47.Scenes
             ((Game) GetTree().CurrentScene).Spawn.GlobalPosition = GlobalPosition;
             Hide();
             Disabled = true;
+            GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D").Play();
         }
 
         private void OnFinish2Game()
