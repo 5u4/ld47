@@ -28,15 +28,10 @@ namespace ld47.Instances.Player
             base._PhysicsProcess(delta);
 
             HandleHorizontalFlip();
-            if (Player.Jump.Coyote < -0.6 && Player.IsOnFloor())
-            {
-                Land();
-                return;
-            }
+            if (Player.Jump.Coyote < -0.6 && Player.IsOnFloor()) return;
             var anim = GetAnimationState();
             if (anim == StateMachine.GetCurrentNode()) return;
             StateMachine.Travel(anim);
-            if (anim == "Jump") Jump();
         }
 
         private void HandleHorizontalFlip()
