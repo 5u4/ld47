@@ -96,10 +96,16 @@ namespace ld47.Scenes
 
         private async void OnFinish1Game()
         {
+            var pos = Camera.GlobalPosition;
+            Camera.GetParent()?.RemoveChild(Camera);
+            Camera.GlobalPosition = pos;
+            AddChild(Camera);
+            
             RotationAnimationPlayer.Start(Player);
             Player.ActionLock.Lock();
             Player.Velocity = Vector2.Zero;
             await ToSignal(RotationAnimationPlayer, "animation_finished");
+            AssignCamera(Player);
             Player.GlobalPosition += Vector2.Up * 10;
             RotationAnimationPlayer.QueueFree();
             CheckPoint = null;
