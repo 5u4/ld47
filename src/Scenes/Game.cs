@@ -14,6 +14,7 @@ namespace ld47.Scenes
         public CheckPoint CheckPoint;
         public Node2D Map;
         public Player Player;
+        public UI UI;
         public RotationAnimationPlayer RotationAnimationPlayer;
         public bool EnabledSuicide;
         public bool UpsideDown;
@@ -25,6 +26,7 @@ namespace ld47.Scenes
             Spawn = Map.GetNode<Position2D>("Spawn");
             Corpses = GetNode<Node2D>("Corpses");
             Camera = GetNode<Camera2D>("MainCamera");
+            UI = GetNode<UI>("CanvasLayer/UI");
             RotationAnimationPlayer = GetNode<RotationAnimationPlayer>("RotationAnimationPlayer");
 
             Emitter.Instance.Connect(nameof(Emitter.NewPlayerSignal), this, nameof(OnNewPlayer));
@@ -100,6 +102,7 @@ namespace ld47.Scenes
             
             EnabledSuicide = true;
             UpsideDown = true;
+            UI.EnableSuicide();
             
             Player.Rotation = Mathf.Pi; // TODO: Add to animation
             Player.Suicide.Enabled = true;
