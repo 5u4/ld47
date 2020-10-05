@@ -3,25 +3,23 @@
 [sub_resource type="AnimationNodeAnimation" id=1]
 animation = "Dead"
 
-[sub_resource type="AnimationNodeAnimation" id=24]
+[sub_resource type="AnimationNodeAnimation" id=2]
 animation = "Fade"
 
-[sub_resource type="AnimationNodeAnimation" id=2]
+[sub_resource type="AnimationNodeAnimation" id=3]
 animation = "Fall"
 
-[sub_resource type="AnimationNodeAnimation" id=3]
+[sub_resource type="AnimationNodeAnimation" id=4]
 animation = "Hit"
 
-[sub_resource type="AnimationNodeAnimation" id=4]
+[sub_resource type="AnimationNodeAnimation" id=5]
 animation = "Idle"
 
-[sub_resource type="AnimationNodeAnimation" id=5]
+[sub_resource type="AnimationNodeAnimation" id=6]
 animation = "Jump"
 
-[sub_resource type="AnimationNodeAnimation" id=6]
+[sub_resource type="AnimationNodeAnimation" id=7]
 animation = "Run"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=7]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=8]
 
@@ -55,25 +53,27 @@ animation = "Run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=23]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
 [sub_resource type="AnimationNodeStateMachineTransition" id=25]
 switch_mode = 2
 
 [resource]
 states/Dead/node = SubResource( 1 )
 states/Dead/position = Vector2( 971, 112 )
-states/Fade/node = SubResource( 24 )
+states/Fade/node = SubResource( 2 )
 states/Fade/position = Vector2( 954, 209 )
-states/Fall/node = SubResource( 2 )
+states/Fall/node = SubResource( 3 )
 states/Fall/position = Vector2( 471, 78 )
-states/Hit/node = SubResource( 3 )
+states/Hit/node = SubResource( 4 )
 states/Hit/position = Vector2( 770, 78 )
-states/Idle/node = SubResource( 4 )
+states/Idle/node = SubResource( 5 )
 states/Idle/position = Vector2( 200, 214 )
-states/Jump/node = SubResource( 5 )
+states/Jump/node = SubResource( 6 )
 states/Jump/position = Vector2( 753, 192 )
-states/Run/node = SubResource( 6 )
+states/Run/node = SubResource( 7 )
 states/Run/position = Vector2( 538, 357 )
-transitions = [ "Idle", "Run", SubResource( 7 ), "Run", "Idle", SubResource( 8 ), "Fall", "Idle", SubResource( 9 ), "Idle", "Fall", SubResource( 10 ), "Idle", "Jump", SubResource( 11 ), "Jump", "Idle", SubResource( 12 ), "Run", "Jump", SubResource( 13 ), "Jump", "Run", SubResource( 14 ), "Jump", "Fall", SubResource( 15 ), "Fall", "Jump", SubResource( 16 ), "Run", "Fall", SubResource( 17 ), "Fall", "Run", SubResource( 18 ), "Fall", "Hit", SubResource( 19 ), "Jump", "Hit", SubResource( 20 ), "Run", "Hit", SubResource( 21 ), "Hit", "Dead", SubResource( 22 ), "Idle", "Hit", SubResource( 23 ), "Dead", "Fade", SubResource( 25 ) ]
+transitions = [ "Idle", "Run", SubResource( 8 ), "Run", "Idle", SubResource( 9 ), "Fall", "Idle", SubResource( 10 ), "Idle", "Fall", SubResource( 11 ), "Idle", "Jump", SubResource( 12 ), "Jump", "Idle", SubResource( 13 ), "Run", "Jump", SubResource( 14 ), "Jump", "Run", SubResource( 15 ), "Jump", "Fall", SubResource( 16 ), "Fall", "Jump", SubResource( 17 ), "Run", "Fall", SubResource( 18 ), "Fall", "Run", SubResource( 19 ), "Fall", "Hit", SubResource( 20 ), "Jump", "Hit", SubResource( 21 ), "Run", "Hit", SubResource( 22 ), "Hit", "Dead", SubResource( 23 ), "Idle", "Hit", SubResource( 24 ), "Dead", "Fade", SubResource( 25 ) ]
 start_node = "Idle"
 end_node = "Fade"
 graph_offset = Vector2( 26, 24 )

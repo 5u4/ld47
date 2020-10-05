@@ -66,6 +66,7 @@
     <Compile Include="Instances\Player\Die.cs" />
     <Compile Include="Instances\Player\Gravity.cs" />
     <Compile Include="Instances\Player\Jump.cs" />
+    <Compile Include="Instances\Player\ParticlesEmit.cs" />
     <Compile Include="Instances\Player\Player.cs" />
     <Compile Include="Instances\Player\Run.cs" />
     <Compile Include="Instances\Player\Suicide.cs" />

@@ -5,6 +5,7 @@ namespace ld47.Instances.Player
     public class Jump : Node2D
     {
         public Player Player;
+        public ParticlesEmit ParticlesEmit;
         public const float JumpHeight = 240f;
         public const float CoyoteTime = 0.2f;
         public float Coyote = CoyoteTime;
@@ -13,6 +14,7 @@ namespace ld47.Instances.Player
         {
             base._Ready();
             Player = GetNode<Player>("../..");
+            ParticlesEmit = GetNode<ParticlesEmit>("Particles2D");
         }
 
         // TODO: hold jump higher
@@ -27,6 +29,7 @@ namespace ld47.Instances.Player
             var canJump = onFloor || Coyote > 0;
             if (!canJump) return;
             Player.Velocity.y = -JumpHeight;
+            if (Player.IsOnFloor()) ParticlesEmit.Emit(0.1f);
         }
     }
 }

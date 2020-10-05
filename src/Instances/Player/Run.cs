@@ -5,6 +5,7 @@ namespace ld47.Instances.Player
     public class Run : Node2D
     {
         public Player Player;
+        public ParticlesEmit ParticlesEmit;
         public const float Speed = 100;
         public const float Acceleration = 0.5f;
         public const float Friction = 0.2f;
@@ -13,6 +14,7 @@ namespace ld47.Instances.Player
         {
             base._Ready();
             Player = GetNode<Player>("../..");
+            ParticlesEmit = GetNode<ParticlesEmit>("Particles2D");
         }
         
         public override void _PhysicsProcess(float delta)
@@ -23,6 +25,8 @@ namespace ld47.Instances.Player
             Player.Velocity.x = Mathf.Abs(direction) > 0
                 ? Mathf.Lerp(Player.Velocity.x, direction * Speed, Acceleration)
                 : Mathf.Lerp(Player.Velocity.x, 0, Friction);
+            if (direction == 0) return;
+            if (Player.IsOnFloor()) ParticlesEmit.Emit(0.1f);
         }
     }
 }
