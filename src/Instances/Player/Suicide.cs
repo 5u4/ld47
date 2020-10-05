@@ -1,4 +1,5 @@
 using Godot;
+using ld47.Utils;
 
 namespace ld47.Instances.Player
 {
@@ -24,6 +25,7 @@ namespace ld47.Instances.Player
         {
             if (!Input.IsActionJustPressed("ui_suicide") || !Enabled) return;
             Player.Die.Enable();
+            Emitter.Instance.EmitSignal(nameof(Emitter.DeathSignal));
         }
     }
 }
